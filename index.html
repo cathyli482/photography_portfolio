@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cathy Li – Photography Portfolio</title>
+  <meta name="description" content="Photography portfolio of Cathy Li, 2024–2025: East Coast, West Coast, In Between, and Home.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top">Cathy Li</a>
+    <nav aria-label="Main">
+      <a href="#east-coast">East Coast</a>
+      <a href="#west-coast">West Coast</a>
+      <a href="#in-between">In Between</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- COVER -->
+    <section class="hero">
+      <h1>Cathy Li</h1>
+      <p class="hero-sub">Photography Portfolio, 2024–2025</p>
+
+      <div class="hero-strip">
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/sun-stayed-to-watch.jpg</span>
+            <img src="images/sun-stayed-to-watch.jpg" alt="">
+          </div>
+        </figure>
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/lantern-night.jpg</span>
+            <img src="images/lantern-night.jpg" alt="">
+          </div>
+        </figure>
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/compagnie-herve-koubi.jpg</span>
+            <img src="images/compagnie-herve-koubi.jpg" alt="">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!--
+      HOW THE PHOTOS WORK
+      - Each photo is one <figure class="photo"> block. Its image file lives in the "images" folder.
+      - If you rename a file, change the src="..." to match.
+      - --ratio is the photo's shape: 3/4 = portrait, 4/3 = landscape, 3/2 = wide landscape.
+      - Add class "wide" next to "photo" to make a photo span the full width of the chapter.
+    -->
+
+    <!-- CHAPTER: EAST COAST -->
+    <section id="east-coast" class="chapter" aria-labelledby="east-coast-title">
+      <div class="chapter-head">
+        <h2 id="east-coast-title" class="chapter-title"><strong>Chapter</strong> <span>East Coast</span></h2>
+        <!-- Draft line: rewrite in your own words -->
+        <p class="chapter-note">Ridgeline sunsets, roller coasters at dusk, and a quiet harbor on a Sunday.</p>
+      </div>
+
+      <div class="chapter-photos">
+        <figure class="photo wide" style="--ratio: 16/9">
+          <div class="frame">
+            <span class="placeholder">images/skyline-drive.jpg</span>
+            <img src="images/skyline-drive.jpg" alt="The sun setting over layered blue ridgelines on Skyline Drive, with wispy clouds above dark treetops" loading="lazy">
+          </div>
+          <figcaption><span class="title">Skyline Drive</span><span class="meta">Shenandoah, VA, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/sun-stayed-to-watch.jpg</span>
+            <img src="images/sun-stayed-to-watch.jpg" alt="A roller coaster loop silhouetted against a pale evening sky between two tall palm trees" loading="lazy">
+          </div>
+          <figcaption><span class="title">The Sun Stayed to Watch</span><span class="meta">Orlando, FL, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/palm-trees-arent-scared.jpg</span>
+            <img src="images/palm-trees-arent-scared.jpg" alt="Palm trees, a yellow building with colorful murals, and a tall coaster tower under a blue sky" loading="lazy">
+          </div>
+          <figcaption><span class="title">Palm Trees Aren’t Scared</span><span class="meta">Orlando, FL, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/melting-chimneys.jpg</span>
+            <img src="images/melting-chimneys.jpg" alt="Snow-dusted rooftops with tall, crooked stone chimneys under a clear blue sky" loading="lazy">
+          </div>
+          <figcaption><span class="title">Melting Chimneys</span><span class="meta">Orlando, FL, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/2">
+          <div class="frame">
+            <span class="placeholder">images/sunday-new-england.jpg</span>
+            <img src="images/sunday-new-england.jpg" alt="Sailboats moored in a calm harbor in front of seaside houses, with rocks in the foreground" loading="lazy">
+          </div>
+          <figcaption><span class="title">Sunday, New England</span><span class="meta">Rockport, MA, 2025</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CHAPTER: WEST COAST -->
+    <section id="west-coast" class="chapter" aria-labelledby="west-coast-title">
+      <div class="chapter-head">
+        <h2 id="west-coast-title" class="chapter-title"><strong>Chapter</strong> <span>West Coast</span></h2>
+        <!-- Draft line: rewrite in your own words -->
+        <p class="chapter-note">Harbors, palms, and light that leans toward gold.</p>
+      </div>
+
+      <div class="chapter-photos">
+        <figure class="photo" style="--ratio: 5/6">
+          <div class="frame">
+            <span class="placeholder">images/leaking-harbor.jpg</span>
+            <img src="images/leaking-harbor.jpg" alt="Rows of sailboat masts in a marina under a deep blue sky, with rainbow lens flares" loading="lazy">
+          </div>
+          <figcaption><span class="title">Leaking Harbor</span><span class="meta">Sausalito, CA, 2024</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 4/3">
+          <div class="frame">
+            <span class="placeholder">images/city-hall.jpg</span>
+            <img src="images/city-hall.jpg" alt="San Francisco City Hall and its dome, seen down a path lined with trees and flags" loading="lazy">
+          </div>
+          <figcaption><span class="title">City Hall</span><span class="meta">San Francisco, CA, 2024</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 4/3">
+          <div class="frame">
+            <span class="placeholder">images/monica-from-afar.jpg</span>
+            <img src="images/monica-from-afar.jpg" alt="Tall palm trees on a cliff overlooking the Santa Monica beach and pier at sunset" loading="lazy">
+          </div>
+          <figcaption><span class="title">Monica from Afar</span><span class="meta">Santa Monica, CA, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 4/3">
+          <div class="frame">
+            <span class="placeholder">images/bird-knows-something.jpg</span>
+            <img src="images/bird-knows-something.jpg" alt="A seagull in flight above a sandstone cliff where two people look out over a railing" loading="lazy">
+          </div>
+          <figcaption><span class="title">The Bird Knows Something We Don’t</span><span class="meta">Laguna Beach, CA, 2025</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CHAPTER: IN BETWEEN -->
+    <section id="in-between" class="chapter" aria-labelledby="in-between-title">
+      <div class="chapter-head">
+        <h2 id="in-between-title" class="chapter-title"><strong>Chapter</strong> <span>In Between</span></h2>
+        <!-- Draft line: rewrite in your own words -->
+        <p class="chapter-note">Afternoons, museums, and fog from the places I passed through.</p>
+      </div>
+
+      <div class="chapter-photos">
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/sponsored-afternoon.jpg</span>
+            <img src="images/sponsored-afternoon.jpg" alt="Folded orange umbrellas and red chairs on a sunny riverside terrace in Buenos Aires" loading="lazy">
+          </div>
+          <figcaption><span class="title">Sponsored Afternoon</span><span class="meta">Buenos Aires, Argentina, 2024</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 4/3">
+          <div class="frame">
+            <span class="placeholder">images/forty-shades-of-green.jpg</span>
+            <img src="images/forty-shades-of-green.jpg" alt="A small green lizard on a wet, glossy leaf surrounded by tropical foliage" loading="lazy">
+          </div>
+          <figcaption><span class="title">Forty Shades of Green</span><span class="meta">Oahu, Hawaii, 2024</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/grand-entry.jpg</span>
+            <img src="images/grand-entry.jpg" alt="A wide stone staircase rising toward arched windows in a warmly lit museum hall" loading="lazy">
+          </div>
+          <figcaption><span class="title">Grand Entry (from the basement)</span><span class="meta">St. Louis, MO, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/been-ruling-since-1700.jpg</span>
+            <img src="images/been-ruling-since-1700.jpg" alt="A low-angle view of a dark bronze equestrian statue under museum ceiling lights" loading="lazy">
+          </div>
+          <figcaption><span class="title">Been Ruling Since 1700</span><span class="meta">Kansas City, MO, 2024</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/casapueblo-fog.jpg</span>
+            <img src="images/casapueblo-fog.jpg" alt="White, curving Casapueblo buildings above a rocky coast, half hidden in fog" loading="lazy">
+          </div>
+          <figcaption><span class="title"><s>London</s>, Casapueblo Fog</span><span class="meta">Punta Ballena, Uruguay, 2024</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CHAPTER: HOME -->
+    <section id="home" class="chapter" aria-labelledby="home-title">
+      <div class="chapter-head">
+        <h2 id="home-title" class="chapter-title"><strong>Chapter</strong> <span>Home</span></h2>
+        <!-- Draft line: rewrite in your own words -->
+        <p class="chapter-note">The people and places I come back to.</p>
+      </div>
+
+      <div class="chapter-photos">
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/lantern-night.jpg</span>
+            <img src="images/lantern-night.jpg" alt="Hands holding blue-ribboned lanterns that glow blue at dusk, with a gothic tower behind" loading="lazy">
+          </div>
+          <figcaption><span class="title">Lantern Night (We Belong)</span><span class="meta">Pittsburgh, PA, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/2">
+          <div class="frame">
+            <span class="placeholder">images/where-the-skies-are-blue.jpg</span>
+            <img src="images/where-the-skies-are-blue.jpg" alt="Two smiling friends, one on the other's back, under a bright blue sky with scattered clouds" loading="lazy">
+          </div>
+          <figcaption><span class="title">Where the Skies Are Blue</span><span class="meta">Lewis, DE, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/compagnie-herve-koubi.jpg</span>
+            <img src="images/compagnie-herve-koubi.jpg" alt="Dancers holding hands in a line on stage beneath fanned beams of light" loading="lazy">
+          </div>
+          <figcaption><span class="title">Compagnie Herve KOUBI</span><span class="meta">Pittsburgh, PA, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/4">
+          <div class="frame">
+            <span class="placeholder">images/midnight-exhale.jpg</span>
+            <img src="images/midnight-exhale.jpg" alt="Steam rising from a street vent beside a glowing lamppost at night" loading="lazy">
+          </div>
+          <figcaption><span class="title">Midnight Exhale</span><span class="meta">Pittsburgh, PA, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 4/3">
+          <div class="frame">
+            <span class="placeholder">images/biscuit-on-the-go.jpg</span>
+            <img src="images/biscuit-on-the-go.jpg" alt="A small curly brown dog in a harness, tongue out, sitting on a gray blanket in a car" loading="lazy">
+          </div>
+          <figcaption><span class="title">Biscuit On the Go</span><span class="meta">Rockport, MA, 2025</span></figcaption>
+        </figure>
+
+        <figure class="photo" style="--ratio: 3/2">
+          <div class="frame">
+            <span class="placeholder">images/swirl-of-joy.jpg</span>
+            <img src="images/swirl-of-joy.jpg" alt="Four friends lying with their heads together, laughing, seen from above" loading="lazy">
+          </div>
+          <figcaption><span class="title">Swirl of Joy</span><span class="meta">Kennett Square, PA, 2025</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <h2>About</h2>
+      <div class="about-body">
+        <p>Behind a camera can only be one pair of eyes, and a shutter only has one finger to press—it’s a second that belongs only to me. The thrill of making quick decisions in fleeting moments rushes with satisfaction and joy. The meaning of film is that a shutter pressed a month ago leaves me forgetting what was in the frame, where I was, or who was beside me. But when looking back, all the memories become clear again. It is as if opening a gift of time, delayed.</p>
+        <p>I am currently an undergraduate student at the University of Pittsburgh, where I always chase to capture the mundane moments of my life. I’m actively seeking opportunities to grow my craft, to where I can push past what I know into what I haven’t tried yet.</p>
+        <p class="signoff">— Cathy</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p><a class="email" href="mailto:hal417@pitt.edu">hal417@pitt.edu</a></p>
+      <!--
+        Want to add links? Remove the arrows around the lines below and fill in your own addresses.
+        <ul class="social">
+          <li><a href="https://www.linkedin.com/in/YOUR-NAME" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://instagram.com/YOUR-HANDLE" rel="noopener">Instagram</a></li>
+        </ul>
+      -->
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Cathy Li. All photographs are my own and may not be used without permission.</p>
+  </footer>
+
+  <!-- PHOTO VIEWER (opens when you click a photo) -->
+  <dialog id="lightbox" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close photo">Close</button>
+    <button class="lb-prev" aria-label="Previous photo">‹</button>
+    <figure>
+      <img id="lb-img" src="" alt="">
+      <figcaption id="lb-caption"></figcaption>
+    </figure>
+    <button class="lb-next" aria-label="Next photo">›</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

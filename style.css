@@ -1,0 +1,354 @@
+/* ---------- Colors & fonts (change these to restyle the whole site) ---------- */
+:root {
+  --wall: #e8e9e6;        /* page background: a gallery wall */
+  --ink: #23272b;         /* main text */
+  --muted: #5d6368;       /* secondary text */
+  --cyan: #1f4e79;        /* accent: cyanotype blue */
+  --frame: #d5d8d6;       /* placeholder tiles */
+
+  --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+  --gap: 1.25rem;
+  --page-pad: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--wall);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+a { color: inherit; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 2rem;
+  padding: 1.5rem var(--page-pad);
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.625rem;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.975rem;
+}
+
+.site-header nav a:hover { color: var(--cyan); }
+
+/* ---------- Photos (shared by cover and chapters) ---------- */
+.photo { margin: 0; }
+
+/* The frame keeps each photo's shape even before it loads */
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ratio, 3/2);
+  background: var(--frame);
+}
+
+.frame .placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.frame img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* If an image file is missing, JS adds .missing so the placeholder shows */
+.photo.missing img { display: none; }
+
+.photo figcaption {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.6rem;
+}
+
+.photo .title { font-weight: 500; }
+.photo .meta  { font-size: 0.9rem; color: var(--muted); }
+
+/* ---------- Cover ---------- */
+.hero {
+  padding: clamp(2.5rem, 7vw, 5rem) var(--page-pad) 0;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(4.5rem, 15vw, 11.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.hero-sub {
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+.hero-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  align-items: start;
+  max-width: 64rem;
+  margin: clamp(2rem, 5vw, 3.5rem) 0 0 auto;
+}
+
+.hero-strip .photo:nth-child(1) { margin-top: clamp(2rem, 6vw, 5rem); }
+.hero-strip .photo:nth-child(3) { margin-top: clamp(3rem, 8vw, 7rem); }
+
+/* ---------- Chapters ---------- */
+.chapter {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: 2rem clamp(1.5rem, 4vw, 4rem);
+  padding: clamp(4rem, 9vw, 8rem) var(--page-pad) 0;
+}
+
+.chapter-head {
+  position: sticky;
+  top: 1.5rem;
+  align-self: start;
+}
+
+.chapter-title {
+  margin: 0;
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  line-height: 1.02;
+}
+
+.chapter-title strong {
+  display: block;
+  font-weight: 700;
+}
+
+.chapter-title span {
+  display: block;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.chapter-note {
+  margin: 1.25rem 0 0;
+  max-width: 18rem;
+  color: var(--muted);
+}
+
+.chapter-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem var(--gap);
+  align-items: start;
+}
+
+.chapter-photos .wide { grid-column: 1 / -1; }
+
+/* ---------- About / Contact ---------- */
+.about,
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: 1.5rem clamp(1.5rem, 4vw, 4rem);
+  padding: clamp(4rem, 9vw, 8rem) var(--page-pad) 0;
+}
+
+.about h2,
+.contact h2 {
+  margin: 0;
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.02;
+}
+
+.about-body,
+.contact > :not(h2) { grid-column: 2; }
+
+.about-body p {
+  max-width: 36rem;
+  margin: 0 0 1.25rem;
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2.2vw, 1.55rem);
+  line-height: 1.45;
+}
+
+.about-body .signoff { font-style: italic; }
+
+.contact p { margin: 0; }
+
+.contact .email {
+  font-family: var(--serif);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: var(--cyan);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.social {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social a { color: var(--muted); }
+.social a:hover { color: var(--cyan); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: clamp(4rem, 9vw, 8rem);
+  padding: 1.5rem var(--page-pad) 2.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--frame);
+}
+
+.site-footer p { margin: 0; }
+
+/* ---------- Photo viewer ---------- */
+.photo .frame img { cursor: zoom-in; }
+.hero-strip .frame img { cursor: default; }
+
+dialog#lightbox {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  background: rgba(20, 23, 26, 0.96);
+  color: #fff;
+}
+
+dialog#lightbox[open] {
+  display: grid;
+  grid-template-columns: 4rem 1fr 4rem;
+  align-items: center;
+}
+
+dialog#lightbox::backdrop { background: transparent; }
+
+#lightbox figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+#lightbox img {
+  max-width: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+}
+
+#lightbox figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #cfd3d6;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+#lightbox figcaption .title { color: #fff; font-weight: 500; }
+
+#lightbox button {
+  background: none;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.lb-prev,
+.lb-next {
+  height: 100%;
+  font-size: 3rem;
+  opacity: 0.75;
+}
+
+.lb-prev:hover,
+.lb-next:hover { opacity: 1; }
+
+.lb-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+
+/* ---------- Smaller screens ---------- */
+@media (max-width: 52rem) {
+  .chapter,
+  .about,
+  .contact { grid-template-columns: 1fr; }
+
+  .chapter-head { position: static; }
+
+  .about-body,
+  .contact > :not(h2) { grid-column: 1; }
+}
+
+@media (max-width: 34rem) {
+  .chapter-photos { grid-template-columns: 1fr; }
+
+  .hero-strip { gap: 0.6rem; }
+
+  dialog#lightbox[open] { grid-template-columns: 2.5rem 1fr 2.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
